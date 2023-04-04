@@ -1,0 +1,11 @@
+├─ controllers
+│  └─ library.controller.js
+├─ middlewares
+│  └─ index.js
+├─ models
+│  └─ library.model.js
+├─ services
+│  ├─ library.service.js
+│  └─ index.js
+├─ db.js
+└─ index.js
