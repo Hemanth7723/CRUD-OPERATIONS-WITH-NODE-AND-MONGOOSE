@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-
 const Book =require('../models/Books.model')
 const {generateCrudMethods} = require('../services')
 const libraryCrud = generateCrudMethods(Book)
@@ -30,7 +29,6 @@ router.get('/:id', validateDbId,(req, res, next) => {
 
 })
         
-
 router.post('/', (req, res, next) => {
     libraryCrud.create(req.body)
         .then(data => res.status(201).json(data))
@@ -54,12 +52,6 @@ router.delete('/:id', validateDbId, (req, res) => {
         })
         .catch(err => next(err))
 })
-
-
-
-
-
-
 
 
 module.exports = router

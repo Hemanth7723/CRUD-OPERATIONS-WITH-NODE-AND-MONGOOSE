@@ -6,11 +6,9 @@ const connectDb = require('./db.js')
 const BookRoutes = require('./controllers/Books.controller')
 const { errorHandler } = require('./middlewares')
 
-
 const app = express()
 
 //middleware
-
 app.use(bodyParser.json())
 app.use('/api/Book',BookRoutes)
 app.use(errorHandler)
